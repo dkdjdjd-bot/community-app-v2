@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.auth import router as auth_router
+from app.api.posts import router as posts_router
 from app.config import settings
 from app.database import create_db_and_tables
 
@@ -36,6 +37,7 @@ app.add_middleware(
 
 # 라우터 등록
 app.include_router(auth_router)
+app.include_router(posts_router)
 
 
 @app.get("/health")
