@@ -10,8 +10,8 @@ React + TypeScript + Vite + Tailwind 기반 Frontend와 FastAPI + SQLAlchemy + S
 ## Technical Context
 
 **Language/Version**: Python 3.11+ (Backend), TypeScript 5.x (Frontend)  
-**Primary Dependencies**: FastAPI, SQLAlchemy 2.0, Pydantic v2, python-jose (JWT), passlib[bcrypt] (Backend) / React 18, React Router v6, Axios, Tailwind CSS 3.x (Frontend)  
-**Storage**: SQLite (SQLAlchemy ORM 사용, 개발/테스트 환경)  
+**Primary Dependencies**: FastAPI, SQLModel (SQLAlchemy + Pydantic v2 통합), python-jose (JWT), passlib[bcrypt] (Backend) / React 18, React Router v6, Axios, Tailwind CSS 3.x (Frontend)  
+**Storage**: SQLite (SQLModel 사용, 개발/테스트 환경)  
 **Testing**: pytest + httpx (Backend), vitest + React Testing Library (Frontend)  
 **Target Platform**: Web (SPA + REST API)  
 **Project Type**: Web application (frontend + backend)  
@@ -51,7 +51,7 @@ backend/
 │   ├── __init__.py
 │   ├── main.py              # FastAPI 앱 진입점
 │   ├── config.py            # 환경 설정 (DB URL, JWT Secret 등)
-│   ├── database.py          # SQLAlchemy 엔진/세션 설정
+│   ├── database.py          # SQLModel 엔진/세션 설정
 │   ├── models/
 │   │   ├── __init__.py
 │   │   ├── user.py          # User 모델
